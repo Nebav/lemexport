@@ -1,0 +1,25 @@
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+progress[value] {
+  width: 250px;
+  height: 50px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-top: 10px;
+}

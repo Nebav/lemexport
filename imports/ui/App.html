@@ -1,0 +1,31 @@
+<body>
+  {{> mainContainer }}
+</body>
+
+<template name="mainContainer">
+  <div class="container">
+    <header>
+      <h1>Lemexport</h1>
+    </header>
+
+    <button class="c-button c-button--brand export-btn">Export</button>
+
+    <ul>
+      {{#each links}}
+        {{> link}}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="link">
+  {{#if loading}}
+    <li>
+      <progress max="100" value="{{progress}}"></progress>
+    </li>
+  {{else}}
+    <li>
+      <a href="{{ url }}" target="_blank">{{ url }}</a>
+    </li>
+  {{/if}}
+</template>
